@@ -6,7 +6,7 @@ import {
   MenuRoot,
   MenuTrigger,
 } from '@/components/ui/menu';
-import type { Platform } from '../hooks/useGames';
+import type { Platform } from '../hooks/usePlatforms';
 import usePlatforms from '../hooks/usePlatforms';
 
 interface Props {
@@ -27,7 +27,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
         </Button>
       </MenuTrigger>
       <MenuContent>
-        {data.map(platform => (
+        {data?.results.map(platform => (
           <MenuItem
             key={platform.id}
             value={platform.slug}

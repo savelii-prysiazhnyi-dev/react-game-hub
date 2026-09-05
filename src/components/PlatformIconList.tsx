@@ -10,7 +10,7 @@ import {
   FaXbox,
 } from 'react-icons/fa';
 import { MdPhoneIphone } from 'react-icons/md';
-import type { Platform } from '../hooks/useGames';
+import type { Platform } from '../hooks/usePlatforms';
 
 interface Props {
   platforms?: Platform[];
