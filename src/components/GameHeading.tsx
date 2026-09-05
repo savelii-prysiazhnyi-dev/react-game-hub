@@ -13,7 +13,11 @@ const GameHeading = () => {
   const heading = `${platform?.name || ''} ${genre?.name || ''} Games`.trim();
 
   return (
-    <Heading as="h1" marginY={5} fontSize="5xl">
+    <Heading
+      as="h1"
+      marginY={5}
+      fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
+    >
       {heading || 'Games'}
     </Heading>
   );

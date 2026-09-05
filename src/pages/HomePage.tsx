@@ -2,6 +2,7 @@ import { Box, Grid, GridItem, HStack } from '@chakra-ui/react';
 import GameGrid from '../components/GameGrid';
 import GameHeading from '../components/GameHeading';
 import GenreList from '../components/GenreList';
+import GenreSelector from '../components/GenreSelector';
 import PlatformSelector from '../components/PlatformSelector';
 import SortSelector from '../components/SortSelector';
 
@@ -23,7 +24,10 @@ const HomePage = () => {
       <GridItem area="main">
         <Box paddingLeft={2}>
           <GameHeading />
-          <HStack gap={5} marginBottom={5}>
+          <HStack gap={{ base: 3, md: 5 }} marginBottom={5} flexWrap="wrap">
+            <Box hideFrom="lg">
+              <GenreSelector />
+            </Box>
             <PlatformSelector />
             <SortSelector />
           </HStack>

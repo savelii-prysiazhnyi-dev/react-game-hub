@@ -16,13 +16,17 @@ const ExpandableText = ({ children }: Props) => {
   const summary = expanded ? children : children.substring(0, limit) + '...';
 
   return (
-    <Text>
+    <Text color="fg.muted" lineHeight="tall">
       {summary}
       <Button
         size="xs"
-        marginLeft={1}
+        marginLeft={2}
         fontWeight="bold"
         colorPalette="yellow"
+        variant="subtle"
+        borderRadius="md"
+        cursor="pointer"
+        _hover={{ bg: 'yellow.muted' }}
         onClick={() => setExpanded(!expanded)}
       >
         {expanded ? 'Show Less' : 'Read More'}

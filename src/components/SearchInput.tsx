@@ -26,6 +26,11 @@ const SearchInput = () => {
           borderRadius={20}
           placeholder="Search games..."
           variant="subtle"
+          border="1px solid"
+          borderColor={{ base: 'blackAlpha.300', _dark: 'whiteAlpha.200' }}
+          _focus={{
+            borderColor: { base: 'blackAlpha.500', _dark: 'whiteAlpha.400' },
+          }}
         />
       </InputGroup>
     </form>

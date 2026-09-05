@@ -41,6 +41,8 @@ const GenreList = () => {
                 onClick={() => setSelectedGenreId(genre.id)}
                 fontSize="md"
                 variant="plain"
+                _hover={{ textDecoration: 'underline' }}
+                cursor="pointer"
               >
                 {genre.name}
               </Button>
