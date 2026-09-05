@@ -6,16 +6,18 @@ import {
   MenuRoot,
   MenuTrigger,
 } from '@/components/ui/menu';
+import usePlatform from '../hooks/usePlatform';
 import type { Platform } from '../hooks/usePlatforms';
 import usePlatforms from '../hooks/usePlatforms';
 
 interface Props {
   onSelectPlatform: (platform: Platform) => void;
-  selectedPlatform: Platform | null;
+  selectedPlatformId?: number;
 }
 
-const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
+const PlatformSelector = ({ onSelectPlatform, selectedPlatformId }: Props) => {
   const { data, error } = usePlatforms();
+  const selectedPlatform = usePlatform(selectedPlatformId);
 
   if (error) return null;
 
