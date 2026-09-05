@@ -1,24 +1,34 @@
 # GameHub
 
-GameHub is a video game discovery web app that helps you find new and interesting games to play. With GameHub, you can search for games, filter by genre and platform, and sort by relevance, popularity, release date, and rating.
+GameHub is a responsive video game discovery platform that allows users to explore, search, filter, and inspect detailed information for thousands of video games in real time. Powered by the [RAWG Video Games Database API](https://rawg.io/apidocs).
 
-Built with **React 19**, **TypeScript**, **Chakra UI v3**, and powered by the [RAWG Video Games Database API](https://rawg.io/apidocs).
+## Tech Stack
 
-## Features
+- React 19
+- TypeScript
+- Chakra UI v3
+- TanStack Query v5
+- Zustand
+- React Router
+- Vite
+- Axios
+- pnpm
 
-- **Search Games**: Instant search bar with keyboard submission.
-- **Filter by Genre**: Browse games categorized by Action, Strategy, RPG, Shooter, and more.
-- **Filter by Platform**: Filter by PC, PlayStation, Xbox, Nintendo, iOS, Android, and macOS.
-- **Sort Ordering**: Sort by Relevance, Date Added, Name, Release Date, Popularity, and Average Rating.
-- **Responsive Layout**: Adaptive multi-column grid with smooth loading skeleton cards.
-- **Dark & Light Mode**: Seamless color mode switching powered by Chakra UI v3.
-- **Rating Badges & Emojis**: Critic scores and rating highlights for top-rated games.
+## Key Features
+
+- **Infinite Scrolling**: Cursor-based infinite pagination with smooth bottom loaders.
+- **Dynamic Search & Filtering**: Multi-faceted filtering by genre, gaming platform, and sorting criteria with global state coordination.
+- **Dedicated Game Detail Views**: Dedicated routing for individual games featuring synopsis, metadata, and expandable descriptions.
+- **Rich Media**: High-definition video trailer playback and responsive screenshot galleries.
+- **Client-Side Routing & Error Boundaries**: Nested layout architecture with persistent navigation and custom route error handling.
+- **Theme Support**: Seamless dark and light theme switching with custom tokenized palettes.
+- **Performance & Caching**: Aggressive multi-tier query caching and initial static data bundling for sub-millisecond initial loads.
 
 ## Getting Started
 
 ### Prerequisites
 
-- **Node.js**: >= 20.x (Node 22 recommended)
+- **Node.js**: >= 20.x
 - **pnpm**: >= 9.x (pnpm 11 recommended)
 
 ### Installation
@@ -36,12 +46,12 @@ Built with **React 19**, **TypeScript**, **Chakra UI v3**, and powered by the [R
    pnpm install
    ```
 
-3. Set up environment variables:
+3. Configure environment variables:
    - Copy `.env.example` to `.env.local`:
      ```bash
      cp .env.example .env.local
      ```
-   - Obtain a free API key from [RAWG API Docs](https://rawg.io/apidocs) and fill in the values in `.env.local`:
+   - Obtain a free API key from [RAWG API Docs](https://rawg.io/apidocs) and set it in `.env.local`:
      ```env
      VITE_RAWG_KEY=your_rawg_api_key_here
      ```
@@ -53,6 +63,7 @@ Built with **React 19**, **TypeScript**, **Chakra UI v3**, and powered by the [R
    ```
 
 5. Build for production:
+
    ```bash
    pnpm run build
    ```
